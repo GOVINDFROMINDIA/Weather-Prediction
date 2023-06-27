@@ -21,11 +21,11 @@ def predict_weather(event=None):
     if wind > 10:
         messagebox.showinfo("Alert", "Cyclone Alert: Heavy wind above 10")
     elif precipitation > 8:
-        messagebox.showinfo("Alert", "Flood Alert: Heavy precipitation above 8")
-    elif temp_max < 10:
-        messagebox.showinfo("Alert", "Snowfall Alert: Max temperature below 10")
-    elif temp_min > 40:
-        messagebox.showinfo("Alert", "Drought Alert: Min temperature above 40")
+        messagebox.showinfo("Alert", "Flood Alert: Heavy precipitation")
+    elif temp_max < -5:
+        messagebox.showinfo("Alert", "Snowfall Alert: Very Low Temperature")
+    elif temp_min > 38:
+        messagebox.showinfo("Alert", "Drought Alert: Very High temperature")
     else:
         prediction = classifier.predict([[precipitation, temp_max, temp_min, wind]])
         label_result.configure(text="Predicted weather: " + prediction[0])
