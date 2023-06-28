@@ -93,16 +93,17 @@ frame_black = tk.Frame(window, bg="black", height=250)
 frame_black.pack(fill="both", expand=True)
 
 g = geocoder.ip('me')
-current_location = g.city + ', ' + g.country
+
 country = g.country
 
 if country == 'IN':
     country = 'India'
+current_location = g.city + ', ' + country
 
 label_location = tk.Label(frame_black, text=current_location, bg="black", fg="white", font=("Helvetica", 36, "bold", "italic"))
-label_location.pack(side="top", padx=(100, 0), pady=(0, 4))
+label_location.pack(side="top", padx=(60, 0), pady=(0, 4))
 
-label_datetime = tk.Label(frame_black, text="", bg="black", fg="white", font=("Helvetica", 35, "bold"))
+label_datetime = tk.Label(frame_black, text="", bg="black", fg="white", font=("Helvetica", 35))
 label_datetime.pack(side="top", pady=(0, 20))
 
 update_time()
