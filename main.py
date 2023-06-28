@@ -22,9 +22,9 @@ def predict_weather(event=None):
     if wind > 15:
         messagebox.showwarning("Alert", "Cyclone Alert: Heavy wind \n National Disaster Response Force (NDRF): 011-26107953")
     elif precipitation > 10:
-        messagebox.showwarning("Alert", "Flood Alert: Heavy precipitation (mm) \n National Emergency Response Center (NERC): 011-26701728, 011-26701729")
+        messagebox.showwarning("Alert", "Flood Alert: Heavy precipitation (cm) \n National Emergency Response Center (NERC): 011-26701728, 011-26701729")
     elif temp_max < -5:
-        messagebox.showwarning("Alert", "Snowfall Alert: Very Low Temperature (°C) \n Tip: Stay Away from Remote Locations")
+        messagebox.showwarning("Alert", "Heavy Snowfall Alert: Very Low Temperature (°C) \n Tip: Stay Away from Remote Locations")
     elif temp_min > 38:
         messagebox.showwarning("Alert", "Drought Alert: Very High temperature (°C) \n Tip: Save Enough Water, don't waste it")
     else:
